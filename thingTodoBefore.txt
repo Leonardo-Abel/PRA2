@@ -1,0 +1,81 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "thingtodobefore")
+
+public class ThingTodoBefore {
+
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "thingId")
+    private int mId;
+
+    @Nullable
+    @ColumnInfo(name = "thingName")
+    private String mName;
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(@NonNull int id) {
+        mId = id;
+    }
+
+    public String getName() {
+		return mName;
+	}
+
+    public void setName(@Nullable String name) {
+		  mName = name;
+
+    public String getDescription() {
+        return mDescription;
+    }
+
+    public void setDescription(@Nullable String description) {
+        mDescription = description;
+    }
+
+    public String getAge() {
+        return mAge;
+    }
+
+    public void setAge(@NonNull int age) {
+        mAge = age;
+    }
+
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        mCreationDate = creationDate;
+    }
+
+    private String mAge;
+
+    private String mCreationDate;
+
+    public int getGrade() {
+        return mGrade;
+    }
+
+    public void setGrade(int grade) {
+        mGrade = grade;
+    }
+
+    private int mGrade;
+
+    public ThingTodoBefore(int Id, String creationDate, String description, int Age, int Grade) {
+        mId = id;
+        mName = name;
+        mCreationDate = creationDate;
+        mDescription = description;
+        mAge = age;
+        mGrade = grade;
+    }
+}
